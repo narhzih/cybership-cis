@@ -1,0 +1,31 @@
+{
+    "name": "cybership-cis",
+    "version": "1.0.0",
+    "description": "Shipping carrier integration service for UPS, FedEx, and more",
+    "type": "module",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "exports": {
+        ".": {
+            "types": "./dist/index.d.ts",
+            "import": "./dist/index.js"
+        }
+    },
+    "scripts": {
+        "build": "tsc",
+        "dev": "tsx src/index.ts",
+        "typecheck": "tsc --noEmit",
+        "test": "vitest run",
+        "test:watch": "vitest"
+    },
+    "dependencies": {
+        "typescript": "^5.9.3",
+        "zod": "^4.3.6"
+    },
+    "devDependencies": {
+        "@types/node": "^25.2.1",
+        "msw": "^2.12.8",
+        "tsx": "^4.21.0",
+        "vitest": "^4.0.18"
+    }
+}
